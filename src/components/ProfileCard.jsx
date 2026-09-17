@@ -10,9 +10,13 @@ function ProfileCard() {
                 <p>@nickname</p>
             </div>
         </div>
-
+        <Post author="Viktor" title="Study React for frontend"  likes={17} text="какой-то осмысленный текст" />
+        <Post author="Viktor" title="Study React for frontend"  likes={17} text="какой-то осмысленный текст" />
+        <Post author="Viktor" title="Study React for frontend"  likes={17} text="какой-то осмысленный текст" />
         <Post author="Viktor" title="Study React for frontend"  likes={17} text="какой-то осмысленный текст" />
     </section>
+    
+        
     )
 }
 
