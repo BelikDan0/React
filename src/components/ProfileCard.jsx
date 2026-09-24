@@ -26,22 +26,24 @@ function ProfileCard() {
 
         },
         {
-            id: 1,
+            id: 4,
             title: "Title4",
             text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
             author: "Devid"
 
         },
         {
-            id: 1,
+            id: 5,
             title: "Title5",
             text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
             author: "Adolf"
 
         },
     ]);
+
     const [title,setTiile]=useState("");
-    const[text,setText]=useState("")
+    const[text,setText]=useState("");
+    
     function addPost(event){
         event.preventDefault();
         const newPost={
@@ -55,6 +57,13 @@ function ProfileCard() {
         setTiile("");
         setText("");
     }
+    function deletePost(id){
+        setPosts(
+            posts.filter(
+                (post)=>post.id != id )
+        );
+        
+    }
     
 
     // const post = {
@@ -67,7 +76,24 @@ function ProfileCard() {
     
 
     return (
+    
         <section className="profile-card">
+            {/* <div className="layout">
+                <aside className="sidebar">
+                    <nav className="menu">
+                        <a href="#" className="menu-item">
+                            Главная
+                        </a>
+                        <a href="#" className="menu-item">
+                            Профиль
+                        </a>
+                        <a href="#" className="menu-item">
+                            Посты
+                        </a>
+                    </nav>
+                </aside>
+            </div> */}
+            
             <div className="profile">
                 <div className="avatar">avatar</div>
                 <div className="profile-info">
@@ -77,12 +103,14 @@ function ProfileCard() {
             </div>
             <form className="post-form" onSubmit={addPost}>
                 <input type="text" placeholder="Заголовок" value={title} onChange={(event)=> setTiile(event.target.value)} />
+                <br />
                 <textarea placeholder="Текст поста" value={text} onChange={(event)=> setText(event.target.value)}/>
+                <br />
                 <button type="submit">Опубликовать</button>
             </form>
 
             {posts.map((post) => (
-                <Post key={post.id} author={post.author} title={post.title} text={post.text} />
+                <Post key={post.id} author={post.author} title={post.title} text={post.text} id={post.id} onDelete={deletePost}  />
             ))}
 
             {/* <Post author="Viktor" title="Study React for frontend" likes={17} text="какой-то осмысленный текст" />

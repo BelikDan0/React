@@ -1,5 +1,5 @@
 * {
-  box-sizing: border-box;
+  
 }
 
 body {
@@ -18,10 +18,11 @@ button {
 
 /* HEADER */
 .header {
-  background: #111827;
+  background: #00c7bd;
   color: white;
   text-align: center;
   padding: 40px 20px;
+
 }
 
 .header h1 {
@@ -63,7 +64,7 @@ main {
   height: 55px;
   display: flex;
   align-items: center;
-  background: #111827;
+  background: #00c7bd;
   color: white;
   border-radius: 50%;
   font-size: 24px;
@@ -110,12 +111,61 @@ main {
   color: #9ca3af;
   font-size: 14px;
 }
+.post-form input{
+  border-radius: 25px;
+  border: 0;
+  height: 40px;
+  width: 300px;
+  padding: 10px;
+  margin: 10px 0px 20px 0px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  outline: none;
+
+}
+.post-form textarea{
+  border-radius: 25px;
+  border: 0;
+  height: 100px;
+  width: 660px;
+  padding: 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  outline: none;
+  
+}
+.post-form input:focus{
+  border: 2px solid #00e4d8;
+}
+.post-form textarea:focus{
+  border: 2px solid #00e4d8;
+}
+
+.post-form button{
+  border: 0;
+  border-radius: 25px;
+  padding: 15px;
+  width: 160px;
+  background-color: #00c7bd;
+  margin: 20px 0px 20px 0px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  color: white;
+  transition: 0.3s;
+  font-weight: 600;
+  
+}
+.post-form button:hover{
+  background-color: #00e4d8;
+  transform: translateY(-2px);
+}
 
 /* ACTIONS */
 .actions {
   display: flex;
   gap: 10px;
   margin-top: 20px;
+ 
 }
 
 .actions button {
@@ -135,4 +185,29 @@ main {
 
 .actions button:active {
   transform: translateY(0);
+}
+.layout{
+  display: flex;
+  min-height: 10vh;
+}
+.sidebar{
+  width: 220px;
+  background-color: #00c7bd;
+  padding: 20px 12px;
+  flex-shrink: 0;
+}
+.menu{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.menu-item{
+  display: block;
+  padding: 12px 16px;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.2s ease;
 }
