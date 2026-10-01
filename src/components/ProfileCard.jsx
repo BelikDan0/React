@@ -65,6 +65,8 @@ function ProfileCard() {
         
     }
     
+    
+    
 
     // const post = {
     //         id:1,
@@ -95,13 +97,17 @@ function ProfileCard() {
             </div> */}
             
             <div className="profile">
-                <div className="avatar">avatar</div>
+                <div className="avatar">
+                    <img className="bird-avatar" src="/images/Без названия.jfif" alt="О проекте" />
+    
+                </div>
                 <div className="profile-info">
                     <h2>Name</h2>
                     <p>@nickname</p>
                 </div>
+                <p className="profile-description">Описание профиля</p>
             </div>
-            <form className="post-form" onSubmit={addPost}>
+            {/* <form className="post-form" onSubmit={addPost}>
                 <input type="text" placeholder="Заголовок" value={title} onChange={(event)=> setTiile(event.target.value)} />
                 <br />
                 <textarea placeholder="Текст поста" value={text} onChange={(event)=> setText(event.target.value)}/>
@@ -111,7 +117,7 @@ function ProfileCard() {
 
             {posts.map((post) => (
                 <Post key={post.id} author={post.author} title={post.title} text={post.text} id={post.id} onDelete={deletePost}  />
-            ))}
+            ))} */}
 
             {/* <Post author="Viktor" title="Study React for frontend" likes={17} text="какой-то осмысленный текст" />
             <Post author="Viktor" title="Study React for frontend" likes={17} text="какой-то осмысленный текст" />

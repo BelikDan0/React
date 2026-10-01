@@ -70,9 +70,14 @@ main {
   font-size: 24px;
   font-weight: bold;
 }
+.avatar .bird-avatar{
+  border-radius: 100px;
+  width: 70px;
+  height: 55px;
+}
 
 .profile-info h2 {
-  margin: 0 0 5px;
+  margin: 0 0 10px;
 }
 
 .profile-info p {
@@ -118,6 +123,7 @@ main {
   height: 40px;
   width: 300px;
   padding: 10px;
+  padding-left: 25px;
   margin: 10px 0px 20px 0px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 15px;
@@ -225,4 +231,20 @@ main {
 .delete-button:hover{
   background-color: #ffb9b9;
   transform:translateY(-2px)
+}
+.header a{
+  display: inline-block;
+  color:#ffffff;
+  text-decoration: none;    
+  margin-right: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 25px;
+  transition: 0.3s;
+}
+.header a:hover{
+  color: #eeeeee;
+  transform: translateY(-2px);
+}
+.bird{
+  width: 1000px;
 }
