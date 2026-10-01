@@ -88,6 +88,7 @@ main {
   border-radius: 20px;
   padding: 25px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  margin-bottom: 10px;
   
 }
 
@@ -210,4 +211,18 @@ main {
   font-size: 15px;
   font-weight: 500;
   transition: all 0.2s ease;
+}
+.delete-button{
+  border:0;
+  border-radius: 25px;
+
+  width: 145px;
+  height: 40px;
+  margin-top: 10px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: 0.3s;
+}
+.delete-button:hover{
+  background-color: #ffb9b9;
+  transform:translateY(-2px)
 }
