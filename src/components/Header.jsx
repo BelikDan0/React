@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 function Header() {
     return (
         <header className="header">
-            <h1>SOCIAL NETWORK</h1>
+            <h1>BELKA🐿️</h1>
             <nav>
                 <Link to="/">Главная</Link>
                 <Link to="/profile">Профиль</Link>

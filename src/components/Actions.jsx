@@ -11,6 +11,7 @@ function Actions() {
             <button onClick={() => setReposts(reposts + 1)}>
                 🔁 {reposts}
             </button>
+        
         </div>
     )
 }

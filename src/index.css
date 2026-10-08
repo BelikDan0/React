@@ -18,7 +18,7 @@ button {
 
 /* HEADER */
 .header {
-  background: #00c7bd;
+  background: #ff7b00;
   color: white;
   text-align: center;
   padding: 40px 20px;
@@ -64,16 +64,28 @@ main {
   height: 55px;
   display: flex;
   align-items: center;
-  background: #00c7bd;
+  background: #ff7b00;
   color: white;
   border-radius: 50%;
+  overflow: hidden;  
+  flex-shrink: 0;
   font-size: 24px;
   font-weight: bold;
 }
+.div-avatar{
+  font-size: 24px;
+  font-weight: bold;
+
+}
+
 .avatar .bird-avatar{
   border-radius: 100px;
   width: 70px;
   height: 55px;
+  padding-right: 10px;
+   object-fit: cover;  
+  object-position: center;
+  display: block;
 }
 
 .profile-info h2 {
@@ -111,11 +123,16 @@ main {
   color: #4b5563;
   line-height: 1.6;
 }
+.post-buttons{
+  display: flex;
+  justify-content: space-between;
+}
 
 .post-author {
   margin: 0;
-  color: #9ca3af;
-  font-size: 14px;
+  color: #000000;
+  
+  font-size: 16px;
 }
 .post-form input{
   border-radius: 25px;
@@ -142,10 +159,10 @@ main {
   
 }
 .post-form input:focus{
-  border: 2px solid #00e4d8;
+  border: 2px solid #ff7b00;
 }
 .post-form textarea:focus{
-  border: 2px solid #00e4d8;
+  border: 2px solid #ff7b00;
 }
 
 .post-form button{
@@ -153,7 +170,7 @@ main {
   border-radius: 25px;
   padding: 15px;
   width: 160px;
-  background-color: #00c7bd;
+  background-color: #ff7b00;
   margin: 20px 0px 20px 0px;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 16px;
@@ -163,7 +180,7 @@ main {
   
 }
 .post-form button:hover{
-  background-color: #00e4d8;
+  background-color: #ffba79;
   transform: translateY(-2px);
 }
 
@@ -248,3 +265,4 @@ main {
 .bird{
   width: 1000px;
 }
+

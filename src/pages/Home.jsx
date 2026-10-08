@@ -14,24 +14,28 @@ function Home() {
       title: "Title2",
       text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
       author: "Z",
+      avatar: "/images/Без названия (1).jfif",
     },
     {
       id: 3,
       title: "Title3",
       text: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born.",
       author: "Cock",
+      avatar: "/images/images.jfif",
     },
     {
       id: 4,
       title: "Title4",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       author: "Devid",
+      avatar: "/images/images.jfif",
     },
     {
       id: 5,
       title: "Title5",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       author: "Adolf",
+      avatar: "/images/images.jfif",
     },
   ]);
 
@@ -51,7 +55,7 @@ function Home() {
             title={post.title}
             text={post.text}
             id={post.id}
-            onDelete={deletePost}
+            avatar={post.avatar}
           />
         ))}
       </div>

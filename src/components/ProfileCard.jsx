@@ -98,11 +98,11 @@ function ProfileCard() {
             
             <div className="profile">
                 <div className="avatar">
-                    <img className="bird-avatar" src="/images/Без названия.jfif" alt="О проекте" />
+                    <img className="bird-avatar" src="/images/images.jfif" alt="/images/images.jfif" />
     
                 </div>
                 <div className="profile-info">
-                    <h2>Name</h2>
+                    <h2>Даниил</h2>
                     <p>@nickname</p>
                 </div>
                 <p className="profile-description">Описание профиля</p>
