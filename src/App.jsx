@@ -1,4 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
+import { ProfileProvider } from './context/profileContext'
+import { PostsProvider } from './context/postContext'
 import { useState } from 'react'
 import './App.css'
 import AboutProject from './pages/AboutProject'
@@ -15,12 +17,16 @@ function App() {
     <div className='app'>
       <Header />
       <main>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/profile' element={<Profile />} />
-          <Route path='/settings' element={<Settings />} />
-          <Route path='/about' element={<AboutProject />} />
-        </Routes>
+        <PostsProvider>
+          <ProfileProvider>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/profile' element={<Profile />} />
+              <Route path='/settings' element={<Settings />} />
+              <Route path='/about' element={<AboutProject />} />
+            </Routes>
+          </ProfileProvider>
+        </PostsProvider>
       </main>
     </div>
   )

@@ -1,6 +1,8 @@
 import Actions from "./Actions";
+import { useProfile } from "../context/profileContext";
 
-function Post({author, title, text, onDelete, id, avatar, likes=0,reposts=0}) {
+function Post({ title, text, onDelete, id, avatar, likes=0,reposts=0}) {
+    const{name}=useProfile();
     return (
         <article className="post">
             
@@ -9,7 +11,7 @@ function Post({author, title, text, onDelete, id, avatar, likes=0,reposts=0}) {
                         <div className="avatar">
                         <img className="bird-avatar" src={avatar} alt="О проекте" />
                     </div>
-                        <p className="post-author">{author}</p> 
+                        <p className="post-author">{name}</p> 
                     </div>
                     
         
@@ -18,7 +20,7 @@ function Post({author, title, text, onDelete, id, avatar, likes=0,reposts=0}) {
                         <div className="avatar">
                         <img className="bird-avatar" src="/images/images.jfif" alt="О проекте" />
                     </div>
-                        <p className="post-author">{author}</p> 
+                        <p className="post-author">{name}</p> 
                     </div>
                     
 

@@ -1,7 +1,9 @@
 import { useState } from "react";
 import Post from "./Post";
+import { useProfile } from "../context/profileContext";
 
 function ProfileCard() {
+    const {name}=useProfile();
     const [posts,setPosts] = useState( [
         {
             id: 1,
@@ -102,7 +104,7 @@ function ProfileCard() {
     
                 </div>
                 <div className="profile-info">
-                    <h2>Даниил</h2>
+                    <h2>{name}</h2>
                     <p>@nickname</p>
                 </div>
                 <p className="profile-description">Описание профиля</p>
