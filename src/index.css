@@ -19,16 +19,14 @@
   --text-muted: #b8b8b8;
   --card: #2b2b2b;
   --border: #555;
-  --accent: #ff7b001f;
+  --accent: #535353;
   --accent-hover:#bb8451;
 }
 
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  transition: background 0.3s, color 0.3s;
+  
 }
 
 button {
@@ -130,9 +128,17 @@ main {
 }
 
 .div-avatar {
-  font-size: 24px;
-  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 12px;
   padding-bottom: 10px;
+}
+
+.div-avatar .post-author {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
 }
 
 .profile-info h2 {

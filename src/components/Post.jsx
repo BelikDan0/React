@@ -1,8 +1,9 @@
 import Actions from "./Actions";
 import { useProfile } from "../context/profileContext";
 
-function Post({ title, text, onDelete, id, avatar, likes=0,reposts=0}) {
-    const{name}=useProfile();
+
+function Post({ title, text, onDelete, id, likes=0,reposts=0}) {
+    const{name,avatar}=useProfile();
     return (
         <article className="post">
             

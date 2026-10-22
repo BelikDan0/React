@@ -3,7 +3,7 @@ import Post from "./Post";
 import { useProfile } from "../context/profileContext";
 
 function ProfileCard() {
-    const {name}=useProfile();
+    const {name,avatar}=useProfile();
     const [posts,setPosts] = useState( [
         {
             id: 1,
@@ -100,7 +100,7 @@ function ProfileCard() {
             
             <div className="profile">
                 <div className="avatar">
-                    <img className="bird-avatar" src="/images/images.jfif" alt="/images/images.jfif" />
+                    <img className="bird-avatar" src={avatar} alt="/images/images.jfif" />
     
                 </div>
                 <div className="profile-info">
