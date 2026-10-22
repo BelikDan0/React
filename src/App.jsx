@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom'
 import { ProfileProvider } from './context/profileContext'
 import { PostsProvider } from './context/postContext'
 import { useState } from 'react'
+import { useTheme } from './context/ThemeContext'
 import './App.css'
 import AboutProject from './pages/AboutProject'
 import Header from "./components/Header"
@@ -12,9 +13,9 @@ import Settings from './pages/Settings'
 
 function App() {
   // const [count, setCount] = useState(0)
-
+  const {theme}=useTheme()
   return (
-    <div className='app'>
+    <div className={`app theme-${theme}`}>
       <Header />
       <main>
         <PostsProvider>

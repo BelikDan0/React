@@ -25,6 +25,7 @@ function handleSave(e){
                     placeholder="Имя профиля"
                     />
                     <button type="submit">Сохранить</button>
+                
                 </form>
             </div>
         </section>
